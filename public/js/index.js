@@ -17,15 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.forEach(el => {
         el.addEventListener('click', () => {
             startAnimation();
-
+            setTimeout(() => {
+                window.location = "http://www.example.com/";
+            }, "5000");
         });
     });
 
 
     // Optionnel : permettre de réinitialiser en cliquant sur le fond après 2s
-    container.addEventListener('dblclick', () => {
-        container.classList.remove('active');
-    });
+    // container.addEventListener('dblclick', () => {
+    //     container.classList.remove('active');
+    // });
 
 });
 
@@ -41,3 +43,6 @@ function scaleScene() {
 
 window.addEventListener('resize', scaleScene);
 scaleScene();
+
+
+
