@@ -8,23 +8,110 @@ body, html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: sans-serif;
     color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.01rem;
+    line-height: 1.3;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+    background: radial-gradient(
+        circle at center,
+        rgba(0,0,0,0) 30%,
+        rgba(0,0,0,0.7) 65%,
+        rgba(0,0,0,1) 100%
+    );
+    z-index: 1;
+}
 
 #container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding-top: 2vh;
 }
 
+
+#parcours {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4vh;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.15em;
+    padding: 0 5vh;
+}
+
+
 .text {
-    margin: auto;
-    flex-basis: 30%;
+    flex-basis: 35%;
+    padding: 0 5vh;
+    z-index: 2;
 }
 
 .text p {
     text-align: justify;
     max-width: 500px;
+}
+
+.neon {
+    font-family: 'Cinzel', serif;
+    color: white;
+    text-align: center;
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px #ffffff,
+        0 0 40px #ffffff;
+
+    position: relative;
+    cursor: pointer;
+    animation: neonFlicker 4s infinite, slightShake 0.2s infinite;
+}
+
+@keyframes neonFlicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+    }
+
+    20%, 24%, 55% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes slightShake {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(0.5px); }
+    100% { transform: translateX(0); }
+}
+
+.neon::after {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, rgba(255,255,255, 0.1), transparent 70%);
+    filter: blur(30px);
+    z-index: -1;
+}
+
+
+.light-pulse {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 20%, rgba(255,255,255), transparent 60%);
+    animation: pulse 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
 }

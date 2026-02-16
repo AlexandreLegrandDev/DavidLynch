@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('click', () => {
             startAnimation();
             setTimeout(() => {
-                window.location = "http://www.example.com/";
+                window.location = "/parcours.html";
             }, "5000");
         });
     });
