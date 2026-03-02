@@ -1,3 +1,16 @@
+// Animation en entrée (fondu noir)
+
+window.addEventListener("load", () => {
+
+  gsap.to(".page-transition", {
+    opacity: 0,
+    duration: 2,
+    ease: "power2.out"
+  });
+
+});
+
+
 // Animation des sections
 
 gsap.registerPlugin(ScrollTrigger);
@@ -57,19 +70,17 @@ button.addEventListener("click", () => {
     }
   });
 
-});
+    video.addEventListener("ended", () => {
 
-// Quand la vidéo se termine
-video.addEventListener("ended", () => {
+        gsap.to(videoContainer, {
+          backgroundColor: "black",
+          duration: 1,
+          onComplete: () => {
+            window.location.href = "../../heritage.html";
+          }
+        });
 
-  // On fade vers noir (sans révéler la page)
-  gsap.to(videoContainer, {
-    backgroundColor: "black",
-    duration: 2.5,
-    onComplete: () => {
-      window.location.href = "../../heritage.html";
-    }
-  });
+      }, { once: true });
 
 });
 

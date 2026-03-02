@@ -4,9 +4,205 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-image: url("/assets/heritage/eraserhead.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: sans-serif;
+}
+
+.page-flash {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.scene-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.eraserhead-scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "w1 w2 w3"
+    "w4 w5 w6";
+    position: absolute;
+    top: 15vh;
+    left: 40vh;
+}
+
+.window {
+    width: 100%;
+    height: 100%;
+}
+
+.window img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.eraserhead-scene {
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    background:black;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.scene-img {
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    pointer-events:none;
+
+}
+
+.window {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    animation: appear 2s forwards;
+}
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+        filter: blur(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        filter: blur(0px);
+
+    }
+
+}
+
+.window img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.7) contrast(1.2);
+    transition: 0.4s;
+}
+
+.window:hover img {
+
+    filter: brightness(1.2);
+
+}
+
+.window::after {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,255,200,0.4),
+        transparent 70%
+    );
+
+    opacity: 0;
+
+    transition: 0.4s;
+
+}
+
+.window:hover::after {
+
+    opacity: 1;
+
+}
+
+.w1 {
+
+    left: 22%;
+    top: 35%;
+    width: 10%;
+
+}
+
+.w2 {
+
+    left: 55%;
+    top: 30%;
+    width: 12%;
+
+} */
+
+.tooltip {
+
+    position: absolute;
+
+    bottom: 120%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 250px;
+
+    padding: 15px;
+
+    background: rgba(0,0,0,0.8);
+
+    backdrop-filter: blur(10px);
+
+    border-left: 3px solid white;
+
+    opacity: 0;
+
+    transition: 0.4s;
+
+}
+
+.window:hover .tooltip {
+
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+
 }

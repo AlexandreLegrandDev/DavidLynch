@@ -13,6 +13,14 @@ body, html {
     color: white;
 }
 
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 9999;
+    pointer-events: none;
+}
+
 h1, h2 {
     font-family: 'Cinzel', serif;
     letter-spacing: 0.15em;
@@ -43,7 +51,6 @@ h1, h2 {
     align-items: center;
     gap: 5vw;
     padding: 4vh 4vw;
-    background: rgba(0, 0, 0, 0.6);
     
     -webkit-mask-image: radial-gradient(circle at center,
         black 60%,
@@ -52,7 +59,6 @@ h1, h2 {
         black 60%,
         transparent 100%);
 
-    backdrop-filter: blur(8px);
     border-radius: 50px;
 
 }
