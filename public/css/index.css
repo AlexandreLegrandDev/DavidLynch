@@ -75,11 +75,10 @@ body, html {
 .element {
     position: absolute;
     cursor: pointer;
-    transition: transform 3.5s ease-in, opacity 1.5s ease-in;
-    transition-delay: 1s;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, opacity 1.2s ease-in;
 }
 
-.bg {
+.bg {   
     position: absolute;
     width: 100%;
     height: 100%;
@@ -100,46 +99,49 @@ body, html {
 }
 
 .item-1 {
-    bottom: -15px;
-    right: 960px;
-    width: 450px;
+    bottom: 40px;
+    right: 1120px;
+    width: 470px;
     z-index: 11;
-    filter: drop-shadow(0 10px 25px rgba(255, 255, 255, 0.6));
-
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 1));
 }
 
 .item-2 { 
-    bottom: -20px;
+    bottom: 50px;
     right: 250px;
-    width: 550px;
+    width: 570px;
     z-index: 11;
-    filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 0.6));
-
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 1));
 }
 
 .item-3 { 
-    bottom: 200px;
-    right: 380px;
-    width: 125px;
+    bottom: 260px;
+    right: 400px;
+    width: 145px;
     z-index: 10;
-    filter: drop-shadow(0 10px 25px rgba(255, 255, 255, 0.6));
-
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 1));
 }
 
 .item-4 { 
-    bottom: 200px;
-    right: 380px;
-    width: 70px;
+    bottom: 135px;
+    right: 760px;
+    width: 85px;
     z-index: 10;
-    filter: drop-shadow(0 10px 25px rgba(255, 255, 255, 0.6));
-    display: none;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 1));
 }
 
-/* .item-1:hover, .item-2:hover, .item-3:hover {
+.item-5 { 
+    bottom: 50px;
+    right: 200px;
+    width: 115px;
+    z-index: 10;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 1));
+}
+
+.item-1:hover, .item-2:hover, .item-3:hover, .item-4:hover, .item-5:hover {
+    filter: drop-shadow(0 10px 25px rgba(255, 255, 255, 0.6));
     transform: scale(1.1);
-    background-color: red;
-    transition: transform ease-in, opacity 1.5s ease-in;
-} */
+}
 
 /* --- ÉTATS ANIMÉS (déclenchés par JS) --- */
 
@@ -159,7 +161,8 @@ body, html {
 .active .element {
     transform: scale(3) translateY(100vh);
     opacity: 0;
-    pointer-events: none; /* Désactive le clic pendant l'animation */
+    pointer-events: none;
+    transition: transform 2.5s ease-in, opacity 2s ease-in;
 }
 
 .active .bg {
