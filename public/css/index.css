@@ -161,7 +161,8 @@ body, html {
 .active .element {
     transform: scale(3) translateY(100vh);
     opacity: 0;
-    pointer-events: none; /* Désactive le clic pendant l'animation */
+    pointer-events: none;
+    transition: transform 2.5s ease-in, opacity 2s ease-in;
 }
 
 .active .bg {
