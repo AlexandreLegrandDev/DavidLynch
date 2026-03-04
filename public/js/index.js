@@ -43,6 +43,3 @@ function scaleScene() {
 
 window.addEventListener('resize', scaleScene);
 scaleScene();
-
-
-
