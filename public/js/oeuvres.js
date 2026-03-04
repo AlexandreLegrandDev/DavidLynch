@@ -76,7 +76,7 @@ button.addEventListener("click", () => {
           backgroundColor: "black",
           duration: 1,
           onComplete: () => {
-            window.location.href = "/heritage.html";
+            window.location.href = "./heritage.html";
           }
         });
 
