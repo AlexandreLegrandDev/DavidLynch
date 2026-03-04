@@ -23,6 +23,22 @@ h1, h2 {
     color: white;
 }
 
+/* Titre fixe par dessus tout */
+
+.Home {
+    position: fixed;
+    z-index: 20;
+    right: 100px;
+    top: 20px;
+    color: white;
+    font-family: 'Cinzel', serif;
+    transition: transform 2.5s ease-in, opacity 2s ease-in;
+    pointer-events: auto;
+}
+.Home a{
+    color: white;
+}
+
 #titre {
     padding: 0 5vh;
     position: fixed;

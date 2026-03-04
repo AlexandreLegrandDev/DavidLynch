@@ -34,6 +34,18 @@ body, html {
     height: 100%;
     overflow: hidden;
 }
+/* Titre fixe par dessus tout */
+
+.Home {
+    position: fixed;
+    z-index: 20;
+    left: 100px;
+    top: 20px;
+    color: white;
+    font-family: 'Cinzel', serif;
+    transition: transform 2.5s ease-in, opacity 2s ease-in;
+    pointer-events: auto;
+}
 
 /* Fond qui apparaît après l'animation */
 .background-reveal {
@@ -158,6 +170,12 @@ body, html {
 
 /* Animation "avancer vers le fond" */
 /* On fait grandir l'image et on la descend pour simuler le passage de la caméra */
+body.active .Home {
+    transform: scale(4) translateY(100vh) !important;
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
 .active .element {
     transform: scale(3) translateY(100vh);
     opacity: 0;
