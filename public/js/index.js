@@ -1,29 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('scene-container');
     const elements = document.querySelectorAll('.element');
+    const home = document.getElementById('home');
 
+    console.log(home)
     // UNE SEULE fonction propre
     const startAnimation = () => {
         document.body.classList.add('active'); // Pour le titre
         container.classList.add('active');     // Pour les rideaux et objets
-        console.log("Animation globale lancée");
     };
 
-    elements.forEach(el => {
-        el.addEventListener('click', () => {
-            const targetPage = el.getAttribute('data-target');
-
-            if (targetPage) {
+    home.addEventListener('click', () => {
+                console.log('hiya')
                 startAnimation();
                 setTimeout(() => {
-                    window.location.href = targetPage;
+                    window.location.href = "./parcours.html";
                 }, 3500); 
-            } else {
-                console.log("Cet objet n'a pas de lien.");
-            }
         });
     });
-});
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const container = document.getElementById('scene-container');
+//     const elements = document.querySelectorAll('.element');
+
+//     // UNE SEULE fonction propre
+//     const startAnimation = () => {
+//         document.body.classList.add('active'); // Pour le titre
+//         container.classList.add('active');     // Pour les rideaux et objets
+//         console.log("Animation globale lancée");
+//     };
+
+//     elements.forEach(el => {
+//         el.addEventListener('click', () => {
+//             const targetPage = el.getAttribute('data-target');
+
+//             if (targetPage) {
+//                 startAnimation();
+//                 setTimeout(() => {
+//                     window.location.href = targetPage;
+//                 }, 3500); 
+//             } else {
+//                 console.log("Cet objet n'a pas de lien.");
+//             }
+//         });
+//     });
+// });
+
 
 // La fonction de scale reste en dehors, c'est très bien
 function scaleScene() {
