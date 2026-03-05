@@ -8,7 +8,7 @@ body, html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: sans-serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 #scene-container {
@@ -153,6 +153,19 @@ body, html {
 .item-1:hover, .item-2:hover, .item-3:hover, .item-4:hover, .item-5:hover {
     filter: drop-shadow(0 10px 25px rgba(255, 255, 255, 0.6));
     transform: scale(1.1);
+}
+
+#tooltip {
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 100;
 }
 
 /* --- ÉTATS ANIMÉS (déclenchés par JS) --- */
