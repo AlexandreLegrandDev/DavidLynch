@@ -1,31 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('scene-container');
-    const elements = document.querySelectorAll('.element');
+    const home = document.getElementById('home');
 
-    // UNE SEULE fonction propre
+    console.log(home)
     const startAnimation = () => {
         document.body.classList.add('active'); // Pour le titre
         container.classList.add('active');     // Pour les rideaux et objets
-        console.log("Animation globale lancée");
     };
 
-    elements.forEach(el => {
-        el.addEventListener('click', () => {
-            const targetPage = el.getAttribute('data-target');
-
-            if (targetPage) {
+    home.addEventListener('click', () => {
                 startAnimation();
                 setTimeout(() => {
-                    window.location.href = targetPage;
+                    window.location.href = "./parcours.html";
                 }, 3500); 
-            } else {
-                console.log("Cet objet n'a pas de lien.");
-            }
         });
     });
-});
 
-// La fonction de scale reste en dehors, c'est très bien
+// document.addEventListener('DOMContentLoaded', () => {
+//     const container = document.getElementById('scene-container');
+//     const elements = document.querySelectorAll('.element');
+
+//     // UNE SEULE fonction propre
+//     const startAnimation = () => {
+//         document.body.classList.add('active'); // Pour le titre
+//         container.classList.add('active');     // Pour les rideaux et objets
+//         console.log("Animation globale lancée");
+//     };
+
+//     elements.forEach(el => {
+//         el.addEventListener('click', () => {
+//             const targetPage = el.getAttribute('data-target');
+
+//             if (targetPage) {
+//                 startAnimation();
+//                 setTimeout(() => {
+//                     window.location.href = targetPage;
+//                 }, 3500); 
+//             } else {
+//                 console.log("Cet objet n'a pas de lien.");
+//             }
+//         });
+//     });
+// });
+
+
 function scaleScene() {
     const scene = document.getElementById('scene');
     const scale = Math.min(
@@ -37,3 +55,29 @@ function scaleScene() {
 
 window.addEventListener('resize', scaleScene);
 scaleScene();
+
+
+const tooltip = document.getElementById("tooltip");
+const elementsHover = document.querySelectorAll(".element");
+
+elementsHover.forEach(el => {
+
+    el.addEventListener("mouseenter", (e) => {
+        const text = el.getAttribute("data-title");
+
+        if(text){
+            tooltip.textContent = text;
+            tooltip.style.opacity = "1";
+        }
+    });
+
+    el.addEventListener("mousemove", (e) => {
+        tooltip.style.left = (e.clientX + 15) + "px";
+        tooltip.style.top = (e.clientY + 15) + "px";
+    });
+
+    el.addEventListener("mouseleave", () => {
+        tooltip.style.opacity = "0";
+    });
+
+});
