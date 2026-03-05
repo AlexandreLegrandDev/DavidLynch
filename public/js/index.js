@@ -1,44 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
     const container = document.getElementById('scene-container');
     const elements = document.querySelectorAll('.element');
-    const bg = document.querySelectorAll('.bg');
 
-    // Fonction pour lancer l'animation
+    // UNE SEULE fonction propre
     const startAnimation = () => {
-        // On ajoute la classe 'active' au parent
-        // CSS s'occupe du reste des transitions
-        container.classList.add('active');
-        
-        console.log("Animation lancée : ouverture des rideaux");
+        document.body.classList.add('active'); // Pour le titre
+        container.classList.add('active');     // Pour les rideaux et objets
+        console.log("Animation globale lancée");
     };
 
-    // On ajoute l'écouteur de clic sur chaque élément du décor
     elements.forEach(el => {
         el.addEventListener('click', () => {
-            startAnimation();
-            setTimeout(() => {
-                window.location = "/parcours.html";
-            }, "5000");
+            const targetPage = el.getAttribute('data-target');
+
+            if (targetPage) {
+                startAnimation();
+                setTimeout(() => {
+                    window.location.href = targetPage;
+                }, 3500); 
+            } else {
+                console.log("Cet objet n'a pas de lien.");
+            }
         });
     });
-
-
-    // Optionnel : permettre de réinitialiser en cliquant sur le fond après 2s
-    // container.addEventListener('dblclick', () => {
-    //     container.classList.remove('active');
-    // });
-
 });
 
-
+// La fonction de scale reste en dehors, c'est très bien
 function scaleScene() {
-  const scene = document.getElementById('scene');
-  const scale = Math.min(
-    window.innerWidth / 1920,
-    window.innerHeight / 1080
-  );
-  scene.style.transform = `scale(${scale})`;
+    const scene = document.getElementById('scene');
+    const scale = Math.min(
+        window.innerWidth / 1920,
+        window.innerHeight / 1080
+    );
+    if (scene) scene.style.transform = `scale(${scale})`;
 }
 
 window.addEventListener('resize', scaleScene);

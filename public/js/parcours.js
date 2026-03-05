@@ -20,7 +20,7 @@ silencio.addEventListener("click", () => {
 
     // Redirection après le fondu
     setTimeout(() => {
-        window.location.href = "/oeuvres.html";
+        window.location.href = "./oeuvres.html";
     }, 3200);
 
 });
