@@ -54,7 +54,7 @@ body::before {
 .background {
     position: absolute;
     inset: 0;
-    background: url("/assets/parcours/mulholland.jpg") center center / cover no-repeat;
+    background: url("../../assets/parcours/mulholland.jpg") center center / cover no-repeat;
     transition: transform 2.5s ease-in-out;
 }
 
