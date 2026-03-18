@@ -271,7 +271,25 @@ body.active .Home {
   color: white;
   border-color: rgba(255,255,255,0.6);
   letter-spacing: 6px;
-}   
+}
+
+
+.light-pulse {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 50%, rgba(0,0,0), transparent 100%);
+    animation: pulse 6s ease-in-out infinite;
+    z-index: 10;
+}
+
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+
 
 @keyframes neonFlicker {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
