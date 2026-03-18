@@ -1,8 +1,17 @@
+// Animation au chargement de la page
+
+window.addEventListener("load", () => {
+    const curtains = document.querySelector(".rideaux");
+    setTimeout(() => {
+        curtains.classList.add("open");
+    }, 300); // petit délai pour effet dramatique
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('scene-container');
     const home = document.getElementById('home');
 
-    console.log(home)
     const startAnimation = () => {
         document.body.classList.add('active'); // Pour le titre
         container.classList.add('active');     // Pour les rideaux et objets
@@ -15,34 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 3500); 
         });
     });
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const container = document.getElementById('scene-container');
-//     const elements = document.querySelectorAll('.element');
-
-//     // UNE SEULE fonction propre
-//     const startAnimation = () => {
-//         document.body.classList.add('active'); // Pour le titre
-//         container.classList.add('active');     // Pour les rideaux et objets
-//         console.log("Animation globale lancée");
-//     };
-
-//     elements.forEach(el => {
-//         el.addEventListener('click', () => {
-//             const targetPage = el.getAttribute('data-target');
-
-//             if (targetPage) {
-//                 startAnimation();
-//                 setTimeout(() => {
-//                     window.location.href = targetPage;
-//                 }, 3500); 
-//             } else {
-//                 console.log("Cet objet n'a pas de lien.");
-//             }
-//         });
-//     });
-// });
-
 
 function scaleScene() {
     const scene = document.getElementById('scene');
