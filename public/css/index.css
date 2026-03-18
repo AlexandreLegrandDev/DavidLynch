@@ -25,7 +25,7 @@ body, html {
 .rideau {
     width: 50%;
     height: 100%;
-    background-image: url("/assets/index/red_curtains.png");
+    background-image: url("../../assets/index/red_curtains.png");
     background-size: cover;
     background-repeat: no-repeat;
     transition: transform 2s cubic-bezier(.77,0,.18,1);
