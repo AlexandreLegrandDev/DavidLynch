@@ -6,15 +6,19 @@
         <meta name="description" content="Expérience interactive avec animation de rideaux">
         <meta name="theme-color" content="#1a0000">
         <title>Expérience Interactive - Rideau</title>
+        <link rel="stylesheet" href="public/css/commun.css">
         <link rel="stylesheet" href="public/css/sources.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="curtains">
-            <img src="./assets/sources/red_curtains.jpg" alt="RIDEAUX" id="curtain-img">
-        </div>
 
         <main class="content">
-            <h1><u>Sources & Inspirations</u></h1>
+            <div id="titre">
+                <h1>Sources & Inspirations</h1>
+            </div>
+            <div class="Home icon">
+                <a href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></a>
+            </div>
             <div class="text-block">
                 <h3>Son parcours</h3>
                 <ul>
@@ -72,7 +76,11 @@
                     <li><a href="https://www.instagram.com/crewdsonstudio/">Instgram - Crewd sons studio Gregory Crewdson</a></li>
                 </ul>
             </div>
+            <div id="fin"><a href="./index.html"><h1 class="neon">Terminer l'experience</h1></a></div>
         </main>
+        <div class="curtains">
+            <img src="./assets/sources/red_curtains.jpg" alt="RIDEAUX" id="curtain-img">
+        </div>
 
         <script src="public/js/sources.js"></script>
     </body>

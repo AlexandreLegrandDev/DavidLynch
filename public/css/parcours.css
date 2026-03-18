@@ -118,52 +118,9 @@ h1 {
     display: flex;
     justify-content: center;
 }
-
-.neon {
-  position: relative;
-  padding: 14px 40px;
-
-  font-family: "Cinzel", serif;
-  font-size: 24px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-
-  color: #d0d0d0;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
-
-  cursor: pointer;
-  overflow: hidden;
-
-  transition: all 0.4s ease;
-    animation: neonFlicker 4s infinite, slightShake 0.2s infinite;
-    text-shadow:
-            0 0 5px #ffffff,
-            0 0 10px #ffffff,
-            0 0 20px #ffffff,
-            0 0 40px #ffffff;
-}
-
-.neon:hover {
-  color: white;
-  border-color: rgba(255,255,255,0.6);
-  letter-spacing: 6px;
-}   
-
-@keyframes neonFlicker {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-        opacity: 1;
-    }
-
-    20%, 24%, 55% {
-        opacity: 0.4;
-    }
-}
-
-@keyframes slightShake {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(0.5px); }
-    100% { transform: translateX(0); }
+ 
+#silencio h1{
+    background-color: rgba(58, 60, 87, 0.2);
 }
 
 .neon::after {
@@ -183,10 +140,4 @@ h1 {
     background: radial-gradient(circle at 50% 20%, rgba(255,255,255), transparent 60%);
     animation: pulse 6s ease-in-out infinite;
     z-index: 0;
-}
-
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
 }
