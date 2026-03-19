@@ -58,23 +58,26 @@ body, html {
 }
 
 .content h1 {
-    font-family: "Cinzel", serif;
     color: white;
     transition: transform 2.5s ease-in, opacity 2s ease-in;
     pointer-events: auto;
 }
-h3{
+h1, h3, h2{
     font-family: 'Cinzel', serif;
+    margin-top: 45px;
 }
-a { 
+a, p, li { 
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem; 
-    line-height: 1.8; 
-    margin-bottom: 20px; 
+    line-height: 1; 
+    margin-bottom: 15px; 
 }
 
 .text-block{
-    margin: 5%;
+    margin: 2% 5%;
+}
+.text-block h2{
+    font-size: 2em;
 }
 .text-block h3{
     font-size: 1.7em;
