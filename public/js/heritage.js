@@ -8,7 +8,6 @@ window.addEventListener("load", () => {
       ease: "power4.out"
     }
   );
-
 });
 
 const windows = document.querySelectorAll(".window");

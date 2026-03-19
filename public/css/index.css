@@ -12,7 +12,6 @@ body, html {
 }
 
 /* Animation au chargement */ 
-
 .rideaux {
     position: fixed;
     inset: 0;
@@ -36,13 +35,11 @@ body, html {
 .left {
     background-position: left center;
 }
-
 .right {
     background-position: right center;
 }
 
 /* Animation */
-
 .rideaux.open .left {
     transform: translateX(-100%);
 }
@@ -74,8 +71,8 @@ body, html {
     height: 100%;
     overflow: hidden;
 }
-/* Titre fixe par dessus tout */
 
+/* Titre fixe par dessus tout */
 #home {
     position: fixed;
     padding: 0 5vh;
@@ -122,14 +119,12 @@ body, html {
     width: 32%;
     left: 20%; 
     z-index: 6;
-
 }
 
 .right-curtain {
     width: 49%;
     right: 0; 
     z-index: 6;
-
 }
 
 /* Éléments interactifs devant */
@@ -150,7 +145,6 @@ body, html {
 }
 
 /* Positionnement "à la main" des objets */
-
 #elements-container {
     position: absolute;
     width: 100%;
@@ -250,7 +244,6 @@ body.active .Home {
     opacity: 0;
     pointer-events: none; /* Désactive le clic pendant l'animation */
 }
-
 
 .light-pulse {
     position: fixed;

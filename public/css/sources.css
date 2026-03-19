@@ -2,12 +2,11 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    /* On enlève overflow: hidden pour permettre le scroll */
     background-image: url("../../assets/sources/glastonbury.webp");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Le fond reste fixe */
-    font-family: 'Cinzel', serif; /* Garde la cohérence avec ta home */
+    background-attachment: fixed;
+    font-family: 'Cinzel', serif;
     color: white;
 }
 

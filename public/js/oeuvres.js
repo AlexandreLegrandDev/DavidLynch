@@ -1,18 +1,13 @@
 // Animation en entrée (fondu noir)
-
 window.addEventListener("load", () => {
-
   gsap.to(".page-transition", {
     opacity: 0,
     duration: 2,
     ease: "power2.out"
   });
-
 });
 
-
 // Animation des sections
-
 gsap.registerPlugin(ScrollTrigger);
 
 let panels = gsap.utils.toArray(".panel");
@@ -52,15 +47,12 @@ window.addEventListener("wheel", (e) => {
   }
 });
 
-
 // Animation transition vidéo
-
 const button = document.getElementById("enterFilm");
 const videoContainer = document.querySelector(".transition-video");
 const video = document.getElementById("roadVideo");
 
 button.addEventListener("click", () => {
-
   // Affiche l'overlay
   gsap.to(videoContainer, {
     opacity: 1,
@@ -69,9 +61,7 @@ button.addEventListener("click", () => {
       video.play();
     }
   });
-
     video.addEventListener("ended", () => {
-
         gsap.to(videoContainer, {
           backgroundColor: "black",
           duration: 1,
@@ -79,8 +69,5 @@ button.addEventListener("click", () => {
             window.location.href = "./heritage.html";
           }
         });
-
       }, { once: true });
-
 });
-
