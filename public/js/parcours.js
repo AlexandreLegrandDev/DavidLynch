@@ -7,7 +7,6 @@ let fade = document.querySelector(".fade");
 let container = document.getElementById("container");
 
 silencio.addEventListener("click", () => {
-
     container.classList.add("hidden");
 
     // Zoom
@@ -22,5 +21,4 @@ silencio.addEventListener("click", () => {
     setTimeout(() => {
         window.location.href = "./oeuvres.html";
     }, 3200);
-
 });

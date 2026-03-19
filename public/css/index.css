@@ -12,7 +12,6 @@ body, html {
 }
 
 /* Animation au chargement */ 
-
 .rideaux {
     position: fixed;
     inset: 0;
@@ -36,13 +35,11 @@ body, html {
 .left {
     background-position: left center;
 }
-
 .right {
     background-position: right center;
 }
 
 /* Animation */
-
 .rideaux.open .left {
     transform: translateX(-100%);
 }
@@ -74,8 +71,8 @@ body, html {
     height: 100%;
     overflow: hidden;
 }
-/* Titre fixe par dessus tout */
 
+/* Titre fixe par dessus tout */
 #home {
     position: fixed;
     padding: 0 5vh;
@@ -85,6 +82,15 @@ body, html {
     opacity: 1;
     transition: opacity 2s ease;
     pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3vh 0;
+    gap: 1vh;
+}
+#home h1 {
+    margin: 0;
+    padding: 0;
 }
 
 /* Fond qui apparaît après l'animation */
@@ -113,14 +119,12 @@ body, html {
     width: 32%;
     left: 20%; 
     z-index: 6;
-
 }
 
 .right-curtain {
     width: 49%;
     right: 0; 
     z-index: 6;
-
 }
 
 /* Éléments interactifs devant */
@@ -141,7 +145,6 @@ body, html {
 }
 
 /* Positionnement "à la main" des objets */
-
 #elements-container {
     position: absolute;
     width: 100%;
@@ -242,67 +245,11 @@ body.active .Home {
     pointer-events: none; /* Désactive le clic pendant l'animation */
 }
 
-#boutonStart {
-    position: relative;
-    padding: 14px 40px;
-
-    font-family: "Cinzel", serif;
-    font-size: 17px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-
-    color: #d0d0d0;
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.2);
-
-    cursor: pointer;
-    overflow: hidden;
-
-    transition: all 0.4s ease;
-    animation: neonFlicker 4s infinite, slightShake 0.2s infinite;
-    text-shadow:
-            0 0 5px #ffffff,
-            0 0 10px #ffffff,
-            0 0 20px #ffffff,
-            0 0 40px #ffffff;
-}
-
-#boutonStart:hover {
-  color: white;
-  border-color: rgba(255,255,255,0.6);
-  letter-spacing: 6px;
-}
-
-
 .light-pulse {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(circle at 50% 50%, rgba(0,0,0), transparent 100%);
+    background: radial-gradient(circle at 50% 50%, rgba(0,0,0), transparent 70%);
     animation: pulse 6s ease-in-out infinite;
     z-index: 10;
-}
-
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
-}
-
-
-
-@keyframes neonFlicker {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-        opacity: 1;
-    }
-
-    20%, 24%, 55% {
-        opacity: 0.4;
-    }
-}
-
-@keyframes slightShake {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(0.5px); }
-    100% { transform: translateX(0); }
 }

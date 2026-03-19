@@ -1,5 +1,4 @@
 // Animation au chargement de la page
-
 window.addEventListener("load", () => {
     const curtains = document.querySelector(".rideaux");
     setTimeout(() => {
